@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible"content="IE-edge">
+<meta name="viewport" content="width=device-width",initial-scale=1.0">
+<tittle>Document</tittle>
+</head>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+div#full {
+    background: #4365c5;
+    width: 400px;
+
+}
+
+h1 {
+    font-size: 21px;
+    background: antiquewhite;
+    color: darkmagenta;
+    text-align: center;
+    font-family: serif;
+}
+
+spen {
+    text-align: center;
+    margin-left: 132px;
+    color: chartreuse;
+}
+
+div#all-input {
+    margin-left: 20px;
+}
+
+div#foter {
+    background: grey;
+    height: 110px;
+}
+
+button#result {
+    border: none;
+    border-radius: 17px;
+    width: 50px;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background: lightblue;
+}
+
+button#reset {
+    border: none;
+    /* background: none; */
+    border-radius: 10px;
+    height: 20px;
+    width: 50px;
+    margin-left: 175px;
+    background: tomato;
+    color: aliceblue;
+}
+
+input#First\ Semister {
+    margin-left: 20px;
+}
+
+input#Second\ Semister {
+    margin-left: 15px;
+}
+
+input#Third\ Semister {
+    margin-left: 17px;
+}
+
+input#Forth\ Semister {
+    margin-left: 19px;
+}
+
+input#Fifth\ Semister {
+    margin-left: 19px;
+}
+
+input#Six\ Semister {
+    margin-left: 19px;
+}
+
+input#Seven\ Semister {
+    margin-left: 19px;
+}
+
+input#Eight\ Semister {
+    margin-left: 21px;
+}
+
+input#Nineth\ Semister {
+    margin-left: 19px;
+}
+
+input#Ten\ Semister {
+    margin-left: 12px;
+}
+
+input#Ten\ Semister {}
+
+input#Eleven\ Semister {
+    margin-left: 12px;
+}
+
+input#Twelve\ Semister {
+    margin-left: 20px;
+}
+
+input#Twelve\ Semister {}
+#message{
+	text-align: center;
+	color: burlywood;
+}
+</style>
+<body>
+	
+<div id = "full">
+	<h1>CGPA CALCULATOR</h1>
+	<spen>Give Your point</spen>
+<div id="all-input">
+1st Semister:<input type="text" id="FirstSemister"></br></br>
+2nd Semister:<input type="text" id="SecondSemister"></br></br>
+3rd Semister:<input type="text" id="ThirdSemister"></br></br>
+4th Semister:<input type="text" id="ForthSemister"></br></br>
+5th Semister:<input type="text" id="FifthSemister"></br></br>
+6th Semister:<input type="text" id="SixSemister"></br></br>
+7th Semister:<input type="text" id="SevenSemister"></br></br>
+8th semister:<input type="text" id="EightSemister"></br></br>
+9th Semister:<input type="text" id="NinethSemister"></br></br>
+10th Semister:<input type="text" id="TenSemister"></br></br>
+11th Semister:<input type="text" id="ElevenSemister"></br></br>
+12Semister:<input type="text" id="TwelveSemister"></br></br>
+
+</div>
+<div id="foter">
+	<button id="result" onclick ="calculate()">Result</button>
+	<button id ="reset "onclick="reseting()">Reset</button>
+	<br><br>
+<div id ="message">
+	<div id ="ms1">CGPA IS</div>
+
+<div id="ms2">Your GRADE  HERE</div>
+</div>
+
+
+</div>
+<script>
+	var FirstSemisterinput= document.getElementById("FirstSemister");
+	var SecondSemisterinput= document.getElementById("SecondSemister");
+	var ThirdSemisterinput= document.getElementById("ForthSemister");
+	var ForthSemisterinput= document.getElementById("FifthSemister");
+	var FifthtSemisterinput= document.getElementById("FifthSemister");
+	var SixSemisterinput= document.getElementById("SixSemister");
+	var SevenSemisterinput= document.getElementById("SevenSemister");
+	var EightSemisterinput= document.getElementById("EightSemister");
+	var NinethSemisterinput= document.getElementById("NinethSemister");
+	var TentSemisterinput= document.getElementById("TenSemister");
+	var ElevenSemisterinput= document.getElementById("ElevenSemister");
+	var TwelveSemisterinput= document.getElementById("TwelveSemister");
+	var result=document.getElementById("result");
+	var result=document.getElementById("reset");
+	var tx1=document.getElementById("ms1");
+	var tx2=document.getElementById("ms2");
+
+
+var FirstSemister= Number(firstSemisterinput.value);		
+var SecondSemister= Number(secondSemisterinput.value);
+var ThirdSemister= Number(thirdSemisterinput.value);
+var ForthSemister= Number(forthSemisterinput.value);
+var FifthSemister= Number(fifthSemisterinput.value);
+var SixSemister= Number(sixSemisterinput.value);
+var SevenSemister= Number(sevenSemisterinput.value);
+var EightSemister= Number(eightSemisterinput.value);
+var NinethSemister= Number(ninethSemisterinput.value);
+var TenSemister= Number(tenSemisterinput.value);
+var ElevenSemister= Number(elevenSemisterinput.value);
+var TwelveSemister= Number(twelveSemisterinput.value);
+var results =(FirstSemister+SecondSemister+ThirdSemister+ForthSemister+FifthSemister+SixSemister+SevenSemister+EightSemister+NinethSemister+TenSemister+ElevenSemister+TwelveSemister)/12;
+
+function calculate(){
+	var FirstSemister= Number(firstSemisterinput.value);		
+var SecondSemister= Number(secondSemisterinput.value);
+var ThirdSemister= Number(thirdSemisterinput.value);
+var ForthSemister= Number(forthSemisterinput.value);
+var FifthSemister= Number(fifthSemisterinput.value);
+var SixSemister= Number(sixSemisterinput.value);
+var SevenSemister= Number(sevenSemisterinput.value);
+var EightSemister= Number(eightSemisterinput.value);
+var NinethSemister= Number(ninethSemisterinput.value);
+var TenSemister= Number(tenSemisterinput.value);
+var ElevenSemister= Number(elevenSemisterinput.value);
+var TwelveSemister= Number(twelveSemisterinput.value);
+var result=document.getElementById("result");
+var tx1=document.getElementById("ms1");
+var results =(FirstSemister+SecondSemister+ThirdSemister+ForthSemister+FifthSemister+SixSemister+SevenSemister+EightSemister+NinethSemister+TenSemister+ElevenSemister+TwelveSemister)/12;
+
+tx1.innerHTML="Your CGPA IS"+results.toFixed(2);
+var tx2=document.getElementById("ms2");
+tx2.innerHTML=message2;
+
+var message2=grades(results)
+
+function reseting(){
+	tx1.innerHTML="";
+    v(firstSemisterinput.vlue);        
+(secondSemisterinput.value)="";
+(thirdSemisterinput.value)="";
+(forthSemisterinput.value)="";
+(fifthSemisterinput.value)="";
+(sixSemisterinput.value)="";
+(sevenSemisterinput.value)="";
+(eightSemisterinput.value)="";
+(ninethSemisterinput.value)="";
+(tenSemisterinput.value)="";
+(elevenSemisterinput.value);
+(twelveSemisterinput.value)="";
+tx2.innerHTML=message2;
+}
+function grades(cgpa){
+    if(cgpa==5){
+        return("Your grade is A+");
+    }
+}
+else if(cgpa)>5{
+alert("You are worng please give your valid input");
+}
+else if(cgpa>=4&& cgpa<5){
+return("Your grade is A");
+}
+else if(cgpa>3.50&& cgpa<4){
+return("Your grade is A-");
+}
+else if(cgpa>3.50&& cgpa>=3){
+return("Your grade is B");
+}
+	else if(cgpa<3&& cgpa>=2){
+return("Your grade is C");
+
+}
+else if(cgpa<2&& cgpa>=1){
+return("Your grade is d");
+}
+else if(cgpa<1){
+return("Your grade are failed");
+}
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</script>
+
+
+
+</body>
